@@ -1,0 +1,354 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Reddit+Mono:wght@200..900&display=swap');
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 100%; /* Adjusted to make sure container takes full width */
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 1rem 0;
+    z-index: 10;
+}
+
+header .logo {
+    float: left;
+}
+
+header .header-right {
+    float: left;
+    margin-left: 20px;
+}
+
+header .header-right a {
+    color: #333;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+header .header-right a:hover {
+    background-color: #ddd;
+}
+
+header .dropdown {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+}
+
+header .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 6;
+}
+
+header .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    z-index: 6;
+}
+
+header .dropdown-content a img {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+header .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+header .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header .dropdown:hover .dropbtn {
+    background-color: #ddd;
+}
+
+/* Clearfix for header */
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    color: white;
+    z-index: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Main Content */
+main {
+    padding: 2rem 0;
+    background-color: #fff;
+}
+
+main section {
+    margin-bottom: 2rem;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+main p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    margin: auto;
+    overflow: hidden;
+    background: #333;
+    border-radius: 15px;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 15px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;    
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #6fbf73;
+}
+
+/* Contact */
+.blue-box {
+    font-family: "Fredoka";
+    background-color: #7bced4;
+    text-align: center;
+    height: 200px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.blue-box h2 {
+    font-family: "Fredoka";
+    font-size: xx-large;
+    color: black;
+    text-align: center;
+}
+
+.paragraphgreen {
+    font-family: "Fredoka";
+    background-color: white;
+    color: black;
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 1000px;
+    font-size: 20px;
+}
+
+.TitleGreen h2 {
+    font-family: "Fredoka";
+    color: red;
+}
+
+.TitleGreen h1 {
+    font-family: "Fredoka";
+    color: #4CAF50;
+}
+
+.TextContact  p {
+    font-family: "Fredoka";
+}
+
+/* Gallery */
+.gallery-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+    
+.gallery-container h2 {
+    font-family: "Fredoka";
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+    
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+    
+.gallery-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+    
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+    
+.gallery-item p {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* About us */
+
+.about-box {
+    stroke: white;
+    font-family: "Fredoka";
+    background-color: #7bced4;
+    height: 200px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    position: relative;
+}
+
+.about-box h2 {
+    font-family: "Fredoka";
+    font-size: xx-large;
+    color: black;
+    text-align: left;
+    stroke: white;
+}
+
+.TextAbout h2 {
+    font-family: "Fredoka";
+    color: #4CAF50;
+    font-size: 40px
+}
+
+.TextAbout li {
+    font-family: "Fredoka";
+    font-size: 25px;
+}
